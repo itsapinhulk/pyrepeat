@@ -13,3 +13,4 @@ TODO
 - [x] Add package distribution
 - [x] Add to pip
 - [ ] Setup tests
+- [ ] Add shields to README
