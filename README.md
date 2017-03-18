@@ -10,6 +10,6 @@ Project code hosted at : https://github.com/itsapinhulk/pyrepeat
 TODO
 ----
 - [x] Add LICENCE, README, etc
-- [ ] Add package distribution
-- [ ] Add to pip
+- [x] Add package distribution
+- [x] Add to pip
 - [ ] Setup tests

@@ -38,13 +38,15 @@ def _parse_args() :
 
   return args.parse_known_args()
 
-def _main() :
+def main() :
   (args, rem_cmd) = _parse_args()
   if args.showversion :
     print('Repeat ' + '.'.join([str(x) for x in list(version)]))
-  else :
+  elif len(rem_cmd) > 0 :
     _repeat_command(num_repeat = args.num_repeat, repeat_interval = args.repeat_interval,
                     no_summary = args.nosummary, no_clear = args.noclear, command = rem_cmd)
+  else :
+    print('No command to execute')
 
 if '__main__' == __name__ :
-  _main()
+  main()

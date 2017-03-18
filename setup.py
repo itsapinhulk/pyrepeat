@@ -3,21 +3,22 @@ import setuptools
 
 curr_dir = os.path.dirname(os.path.abspath(__file__))
 
-version = open(os.path.join(curr_dir, 'VERSION'), 'r').read().strip()
+version = open(os.path.join(curr_dir, 'pyrepeat/VERSION'), 'r').read().strip()
 
-description = 'Python repeat command'
+description = 'Repeat command'
 github_url = 'https://github.com/itsapinhulk/pyrepeat'
-long_description = description + '. See ' + github_url + '.'
+long_description = 'Python script which repeats command until stopped. See ' + github_url + '.'
 
 setuptools.setup(
-    name    = 'pyrepeat',
-    version = version,
-    description = description,
+    name              = 'pyrepeat',
+    version           = version,
+    description       = description,
     long_description  = long_description,
-    url = github_url,
-    license = 'MIT',
+    url               = github_url,
+    license           = 'MIT',
+
     classifiers = [
-      'Development Status :: 4 - Beta',
+      'Development Status :: 5 - Production/Stable',
       'Environment :: Console',
       'Intended Audience :: Developers',
       'License :: OSI Approved :: MIT License',
@@ -25,11 +26,16 @@ setuptools.setup(
       'Programming Language :: Python :: 3',
       'Topic :: Utilities',
     ],
-    keywords = 'console utility',
-    packages='repeat',
+    keywords = 'console utility repeat',
+    packages = [
+      'pyrepeat',
+    ],
+    package_data = {
+      'pyrepeat': ['VERSION'],
+    },
     entry_points = {
       'console_scripts' : [
-        'repeat=repeat:_main',
+        'repeat=pyrepeat:main',
       ],
     },
 )
