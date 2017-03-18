@@ -11,4 +11,5 @@ TODO
 ----
 - [x] Add LICENCE, README, etc
 - [ ] Add package distribution
+- [ ] Add to pip
 - [ ] Setup tests
